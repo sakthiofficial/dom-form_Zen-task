@@ -1,9 +1,10 @@
-function inputEl(tag, attr, attrval, attr1, attrval1, attr2, attrval2, attr3, attrval3) {
+function inputEl(tag, attr, attrval, attr1, attrval1, attr2, attrval2, attr3, attrval3,attrval4) {
     var ele = document.createElement(tag);
     ele.setAttribute(attr, attrval);
     ele.setAttribute(attr1, attrval1);
     ele.setAttribute(attr2, attrval2);
     ele.setAttribute(attr3, attrval3);
+    ele.setAttribute(attrval4)
 
     return ele;
 }
@@ -24,28 +25,28 @@ function lableEl(tag, attr, attrval, cont) {
 var inputfield = document.querySelector("form")
 var fnLab = lableEl("lable", "for", "first-name", "FIRST NAME")
 inputfield.append(fnLab)
-var fn = inputEl("input", "type", "text", "id", "first-name", "placeholder", "YOUR FIRST NAME", "class", "fn")
+var fn = inputEl("input", "type", "text", "id", "first-name", "placeholder", "YOUR FIRST NAME", "class", "fn","required")
 inputfield.append(fn)
 var br1 = breakEl("br")
 inputfield.append(br1)
 //last name input
 var lnLab = lableEl("lable", "for", "ln", "LAST NAME")
 inputfield.append(lnLab)
-var ln = inputEl("input", "type", "text", "id", "ln", "placeholder", "YOUR LAST NAME", "class", "ln")
+var ln = inputEl("input", "type", "text", "id", "ln", "placeholder", "YOUR LAST NAME", "class", "ln","required")
 inputfield.append(ln)
 var br2 = breakEl("br")
 inputfield.append(br2)
 // Addres input
 var addLab = lableEl("lable", "for", "add", "ADDRESS")
 inputfield.append(addLab)
-var add = inputEl("input", "type", "text", "id", "add", "placeholder", "YOUR ADDRESS", "class", "add")
+var add = inputEl("input", "type", "text", "id", "add", "placeholder", "YOUR ADDRESS", "class", "add","required")
 inputfield.append(add)
 var br4 = breakEl("br")
 inputfield.append(br4)
 // Pincode input
 var pinLab = lableEl("lable", "for", "pin", "PINCODE")
 inputfield.append(pinLab)
-var pin = inputEl("input", "type", "number", "id", "pin", "placeholder", "YOUR PINCODE", "class", "pin")
+var pin = inputEl("input", "type", "number", "id", "pin", "placeholder", "YOUR PINCODE", "class", "pin","required")
 inputfield.append(pin)
 var br5 = breakEl("br")
 inputfield.append(br5)
@@ -54,11 +55,11 @@ var headGen = document.createElement("div")
 headGen.setAttribute("class", "cont")
 headGen.innerHTML = "GENDER"
 inputfield.append(headGen)
-var male = inputEl("input", "type", "radio", "id", "male", "value", "MALE", "class", "male")
+var male = inputEl("input", "type", "radio", "id", "male", "value", "MALE", "class", "male","required")
 inputfield.append(male)
 var maleLab = lableEl("lable", "for", "male", "MALE")
 inputfield.append(maleLab)
-var female = inputEl("input", "type", "radio", "id", "female", "value", "FEMALE", "class", "female")
+var female = inputEl("input", "type", "radio", "id", "female", "value", "FEMALE", "class", "female","required")
 inputfield.append(female)
 var femaleLab = lableEl("lable", "for", "male", "FEMALE")
 inputfield.append(femaleLab)
